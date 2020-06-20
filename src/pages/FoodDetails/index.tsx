@@ -56,8 +56,10 @@ interface Food {
   id: number;
   name: string;
   description: string;
+  category: string;
   price: number;
   image_url: string;
+  thumbnail_url: string;
   formattedPrice: string;
   extras: Extra[];
 }
@@ -164,9 +166,17 @@ const FoodDetails: React.FC = () => {
 
   async function handleFinishOrder(): Promise<void> {
     // Finish the order and save on the API
-    // await api.post('orders', food).then(() => {
-    //   navigation.navigate('Orders');
-    // });
+    const newOrder = {
+      product_id: food.id,
+      name: food.name,
+      description: food.description,
+      price: food.price,
+      category: food.category,
+      thumbnail_url: food.thumbnail_url,
+      extras,
+    };
+    await api.post('/orders', newOrder);
+    navigation.goBack();
   }
 
   // Calculate the correct icon name
