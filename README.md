@@ -14,7 +14,7 @@ Agora irá praticar o React Native junto com TypeScript, para criar um pequeno a
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Axios](https://github.com/axios/axios/)
-- [intl](hhttps://www.npmjs.com/package/intl)
+- [intl](https://www.npmjs.com/package/intl)
 - [styled-components](https://styled-components.com/)
 - [Typescript](https://www.typescriptlang.org/)
 
